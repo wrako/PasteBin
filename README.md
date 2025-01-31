@@ -1,5 +1,7 @@
 # **PasterBin – Web Application for Storing and Sharing Text Blocks**  
 
+![PasterBin Architecture](pasterbin-architecture.png)
+
 **PasterBin** is a high-performance web application designed for storing, sharing, and managing text blocks. It supports the generation of unique URLs, uses **Redis Cloud** for caching, and stores text in **Amazon S3**. The application is built with a **microservices architecture**, ensuring reliability and scalability.  
 
 ---
