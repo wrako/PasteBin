@@ -2,7 +2,7 @@
 
 ![PasterBin Architecture](pasterbin-architecture.png)
 
-**PasterBin** is a high-performance web application designed for storing, sharing, and managing text blocks. It supports the generation of unique URLs, uses **Redis Cloud** for caching, and stores text in **Amazon S3**. The application is built with a **microservices architecture**, ensuring reliability and scalability.  
+**PasterBin** is a high-performance web application designed for storing, sharing, and managing text blocks. It supports the generation of unique URLs, uses **Redis Cloud** for caching, and stores text in **Azure Blob Storage**. The application is built with a **microservices architecture**, ensuring reliability and scalability.
 
 ---
 
@@ -10,7 +10,7 @@
 ✅ **Create, edit, and delete text blocks**  
 ✅ **Generate unique URLs for quick text access**  
 ✅ **Cache data in Redis Cloud for instant retrieval**  
-✅ **Store text data in Amazon S3**  
+✅ **Store text data in Azure Blob Storage**  
 ✅ **Delete data upon user request**  
 ✅ **Load balancing for efficient request distribution**  
 
@@ -25,7 +25,7 @@
 - **Spring Data JPA**  
 - **PostgreSQL** (for metadata storage)  
 - **Redis Cloud** (for caching URLs)  
-- **Amazon S3** (for storing text blocks)  
+- **Azure Blob Storage** (for storing text blocks)  
 - **RestTemplate** (for inter-service communication)  
 
 ---
@@ -51,3 +51,5 @@ The application runs entirely in containers, **automatically deploying all servi
 To start the system, run:  
 ```bash
 docker-compose up -d
+```
+
