@@ -31,8 +31,8 @@
 ---
 
 ## **Microservices**  
-🔹 **API Service** – Handles user requests, manages text storage, interacts with the database, cache, and storage.  
-🔹 **Hash Generator** – Generates unique hashes (identifiers) for text blocks.  
+🔹 **Pasterbin** – Handles user requests, manages text storage, interacts with the database, cache, and storage.  
+🔹 **UrlGenerator** – Generates unique hashes (identifiers) for text blocks.  
 
 ---
 
