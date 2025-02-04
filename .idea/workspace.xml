@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32876427-56e2-47ea-b42e-a1418e1b5f73" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="32876427-56e2-47ea-b42e-a1418e1b5f73" name="Changes" comment="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasterBin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/conf/BlobExpirationTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/conf/BlobExpirationTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/entity/Paste.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/entity/Paste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/repo/PasteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/repo/PasteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/service/BlobStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/service/BlobStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasterBin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,8 +255,17 @@
       <workItem from="1738517712000" duration="2000" />
       <workItem from="1738527478784" duration="6504000" />
       <workItem from="1738597828693" duration="6352000" />
-      <workItem from="1738695549418" duration="6064000" />
+      <workItem from="1738695549418" duration="11792000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB">
+      <option name="closed" value="true" />
+      <created>1738702955425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738702955425</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +273,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB" />
   </component>
 </project>

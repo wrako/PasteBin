@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 @Data
 @NoArgsConstructor
@@ -17,7 +19,9 @@ public class Paste {
     private String id;
     private String title;
     private String blobUrl;
-    private String expirationTime;
+
+//    @Field(targetType = FieldType.DATE)
+    private Instant expirationTime;
 
 ///  For future update
 //    private int views;
@@ -32,10 +36,10 @@ public class Paste {
 //    private List<String> tags;
 
 
-    public Paste(String title, String blobUrl, String expirationTime) {
+    public Paste(String title, String blobUrl, LocalDateTime expirationTime) {
         this.title = title;
         this.blobUrl = blobUrl;
-        this.expirationTime = expirationTime;
+        this.expirationTime = expirationTime.toInstant(ZoneOffset.UTC);;
     }
 }
 

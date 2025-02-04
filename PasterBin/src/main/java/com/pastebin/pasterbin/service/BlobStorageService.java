@@ -41,7 +41,7 @@ public class BlobStorageService {
             long lifeTimeMinutes = Long.parseLong(lifeTimeOfPaster);
             LocalDateTime expirationTime = LocalDateTime.now().plusSeconds(lifeTimeMinutes);
 
-            Paste paste = new Paste(blobName, blobClient.getBlobUrl(), expirationTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+            Paste paste = new Paste(blobName, blobClient.getBlobUrl(), expirationTime);
             pasteRepository.save(paste);
 
             return "http://localhost:8080/api/" + blobName;
