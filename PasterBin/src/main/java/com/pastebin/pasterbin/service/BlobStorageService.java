@@ -6,15 +6,14 @@ import com.azure.storage.blob.BlobContainerClient;
 import com.azure.storage.blob.BlobServiceClient;
 import com.pastebin.pasterbin.entity.Paste;
 import com.pastebin.pasterbin.repo.PasteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 
 @Service
@@ -63,7 +62,7 @@ public class BlobStorageService {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             blobClient.downloadStream(outputStream);
 
-            return outputStream.toString("UTF-8"); // Укажите нужную кодировку, например, UTF-8
+            return outputStream.toString(StandardCharsets.UTF_8); // Укажите нужную кодировку, например, UTF-8
         } catch (Exception e) {
             throw new RuntimeException("Failed to get blob: " + blobName, e);
         }

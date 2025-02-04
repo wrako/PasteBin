@@ -4,7 +4,6 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -39,7 +38,7 @@ public class Paste {
     public Paste(String title, String blobUrl, LocalDateTime expirationTime) {
         this.title = title;
         this.blobUrl = blobUrl;
-        this.expirationTime = expirationTime.toInstant(ZoneOffset.UTC);;
+        this.expirationTime = expirationTime.toInstant(ZoneOffset.UTC);
     }
 }
 
