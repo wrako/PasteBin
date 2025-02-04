@@ -1,34 +1,42 @@
 package com.pastebin.pasterbin.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
-@Entity
+@Document(collection = "posts")  // MongoDB collection name
 public class Paste {
+    
     @Id
-    @GeneratedValue
-    private Long id;
-
+    private String id;
     private String title;
-
     private String blobUrl;
+    private String expirationTime;
 
-    private LocalDateTime expirationTime;
+///  For future update
+//    private int views;
+//    private int likes;
+//    private LocalDateTime createdAt;
+//    private LocalDateTime updatedAt;
+//    private boolean isEdited;
 
-    public Paste(String title, String blobUrl, LocalDateTime expirationTime) {
+//    private Author author;
+//    private List<Attachment> attachments;
+//    private List<Comment> comments;
+//    private List<String> tags;
+
+
+    public Paste(String title, String blobUrl, String expirationTime) {
         this.title = title;
         this.blobUrl = blobUrl;
         this.expirationTime = expirationTime;
     }
-
-
 }
 
 

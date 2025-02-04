@@ -5,6 +5,10 @@ spring:
       host: redis-14951.c282.east-us-mz.azure.redns.redis-cloud.com
       port: 14951
       password: z1haaboz3d3Xrxvb1t6th1lEz9AjUs6z
+    mongodb:
+      host: localhost
+      port: 27017
+      database: metadata_db
 
   cloud:
     azure:

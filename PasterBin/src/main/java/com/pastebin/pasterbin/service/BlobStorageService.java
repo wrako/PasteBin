@@ -14,6 +14,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 @Service
@@ -40,7 +41,7 @@ public class BlobStorageService {
             long lifeTimeMinutes = Long.parseLong(lifeTimeOfPaster);
             LocalDateTime expirationTime = LocalDateTime.now().plusSeconds(lifeTimeMinutes);
 
-            Paste paste = new Paste(blobName, blobClient.getBlobUrl(), expirationTime);
+            Paste paste = new Paste(blobName, blobClient.getBlobUrl(), expirationTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             pasteRepository.save(paste);
 
             return "http://localhost:8080/api/" + blobName;
