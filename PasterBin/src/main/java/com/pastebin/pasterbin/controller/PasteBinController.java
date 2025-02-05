@@ -8,10 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class PasteBinController {
 
     private final BlobStorageService blobStorageService;
@@ -22,6 +22,7 @@ public class PasteBinController {
         this.blobStorageService = blobStorageService;
         this.redisService = redisService;
     }
+
 
     @PostMapping("/save")
     public String saveText(@RequestBody PasteRequest request) {

@@ -40,7 +40,13 @@ public class BlobStorageService {
             long lifeTimeMinutes = Long.parseLong(lifeTimeOfPaster);
             LocalDateTime expirationTime = LocalDateTime.now().plusSeconds(lifeTimeMinutes);
 
-            Paste paste = new Paste(blobName, blobClient.getBlobUrl(), expirationTime);
+            Paste paste = new Paste();
+            paste.setTitle(blobName); paste.setBlobUrl(blobClient.getBlobUrl());
+            paste.setLikes(0); paste.setViews(0);
+            paste.setExpirationTime(expirationTime);
+            paste.setCreatedAt(LocalDateTime.now());
+            paste.setUpdatedAt(LocalDateTime.now());
+            paste.setEdited(false);
             pasteRepository.save(paste);
 
             return "http://localhost:8080/api/" + blobName;
@@ -55,7 +61,6 @@ public class BlobStorageService {
             BlobClient blobClient = new BlobClientBuilder().endpoint(blobUrl).buildClient();
 
             if (!blobClient.exists()) {
-//                throw new RuntimeException("Blob with name " + blobName + " dose not exist.");
                 return null;
             }
 
