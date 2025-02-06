@@ -35,6 +35,7 @@ public class PasteBinController {
         pasteRepository.save(paste);
     }
 
+
     @PostMapping("/add/view")
     public void addView(@RequestParam String fileName) {
         Paste paste = pasteRepository.findByTitle(fileName).getFirst();
@@ -42,10 +43,10 @@ public class PasteBinController {
         pasteRepository.save(paste);
     }
 
-    @PostMapping("/edit")
-    public String editPost(@RequestBody PasteRequest request) {
-        return null;
-    }
+//    @PostMapping("/edit")
+//    public String editPost(@RequestBody PasteRequest request) {
+//        return null;
+//    }
 
 
     @PostMapping("/save")
