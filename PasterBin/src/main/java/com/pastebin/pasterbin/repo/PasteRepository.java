@@ -8,4 +8,5 @@ import java.util.List;
 public interface PasteRepository extends MongoRepository<Paste, String> {
     List<Paste> findByTitle(String title);
     List<Paste> findAllByExpirationTimeBefore(Instant time);
+
 }

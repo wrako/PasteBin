@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32876427-56e2-47ea-b42e-a1418e1b5f73" name="Changes" comment="refactor(PasterBin): remove unused imports">
+    <list default="true" id="32876427-56e2-47ea-b42e-a1418e1b5f73" name="Changes" comment="feat(PasterBin): add new fields to Paste entity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/controller/PasteBinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/controller/PasteBinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/entity/Paste.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/entity/Paste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/service/BlobStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/service/BlobStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/repo/PasteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PasterBin/src/main/java/com/pastebin/pasterbin/repo/PasteRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UrlGeneratorApplication">
+  <component name="RunManager" selected="Spring Boot.PasterBinApplication">
     <configuration name="PasterBinApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" value="inst " />
       <envs>
@@ -255,7 +254,8 @@
       <workItem from="1738527478784" duration="6504000" />
       <workItem from="1738597828693" duration="6352000" />
       <workItem from="1738695549418" duration="23206000" />
-      <workItem from="1738773003809" duration="4372000" />
+      <workItem from="1738773003809" duration="10535000" />
+      <workItem from="1738846641837" duration="9660000" />
     </task>
     <task id="LOCAL-00001" summary="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB">
       <option name="closed" value="true" />
@@ -281,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738709012558</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(PasterBin): add new fields to Paste entity">
+      <option name="closed" value="true" />
+      <created>1738779338627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738779338627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +300,7 @@
     <MESSAGE value="refactor(PasterBin): migrate repository from SQL (PostgreSQL) to MongoDB" />
     <MESSAGE value="fix(PasterBin): ensure lifeTime is stored with correct timezone" />
     <MESSAGE value="refactor(PasterBin): remove unused imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(PasterBin): remove unused imports" />
+    <MESSAGE value="feat(PasterBin): add new fields to Paste entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(PasterBin): add new fields to Paste entity" />
   </component>
 </project>

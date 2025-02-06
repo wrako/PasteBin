@@ -1,6 +1,8 @@
 package com.pastebin.pasterbin.controller;
 
 import com.pastebin.pasterbin.dto.PasteRequest;
+import com.pastebin.pasterbin.entity.Paste;
+import com.pastebin.pasterbin.repo.PasteRepository;
 import com.pastebin.pasterbin.service.BlobStorageService;
 import com.pastebin.pasterbin.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +18,38 @@ public class PasteBinController {
 
     private final BlobStorageService blobStorageService;
     private final RedisService redisService;
+    private final PasteRepository pasteRepository;
 
     @Autowired
-    public PasteBinController(BlobStorageService blobStorageService, RedisService redisService) {
+    public PasteBinController(BlobStorageService blobStorageService, RedisService redisService, PasteRepository pasteRepository) {
         this.blobStorageService = blobStorageService;
         this.redisService = redisService;
+        this.pasteRepository = pasteRepository;
+    }
+
+
+    @PostMapping("/add/like")
+    public void addLike(@RequestParam String fileName) {
+        Paste paste = pasteRepository.findByTitle(fileName).getFirst();
+        paste.setLikes(paste.getLikes() + 1);
+        pasteRepository.save(paste);
+    }
+
+    @PostMapping("/add/view")
+    public void addView(@RequestParam String fileName) {
+        Paste paste = pasteRepository.findByTitle(fileName).getFirst();
+        paste.setViews(paste.getViews() + 1);
+        pasteRepository.save(paste);
+    }
+
+    @PostMapping("/edit")
+    public String editPost(@RequestBody PasteRequest request) {
+        return null;
     }
 
 
     @PostMapping("/save")
-    public String saveText(@RequestBody PasteRequest request) {
+    public String savePost(@RequestBody PasteRequest request) {
 
         RestTemplate restTemplate = new RestTemplate();
         String externalServiceUrl = "http://localhost:8081/gen";
