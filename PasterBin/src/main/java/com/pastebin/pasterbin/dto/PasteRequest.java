@@ -1,5 +1,6 @@
 package com.pastebin.pasterbin.dto;
 
+
 public class PasteRequest {
     private String text;
     private String lifeTime;
